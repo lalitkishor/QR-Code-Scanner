@@ -10,14 +10,10 @@ app.controller("barcodeCtrl",function($scope){
     });
 	Instascan.Camera.getCameras().then(function (cameras) {
 		if (cameras.length > 0) {
-		var selectedCam = scanner.start(cameras[0]);
-		 $.each(cameras, (i, c) => {
-         if (c.name.indexOf('back') != -1) {
-            	selectedCam = c;
-            return false;
-        	}
-        
-    	});
+		var selectedCam = cameras[0];
+		if (cameras.length == 2){
+			selectedCam = cameras[1];
+		}
 		scanner.start(selectedCam);  
 		} else {
 		  console.error('No cameras found.');
