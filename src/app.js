@@ -13,6 +13,7 @@ app.controller("barcodeCtrl",function($scope){
 		var selectedCam = cameras[0];
 		if (cameras.length == 2){
 			selectedCam = cameras[1];
+			document.getElementById('preview').style.transform = "scaleX(1)";
 		}
 		scanner.start(selectedCam);  
 		} else {
