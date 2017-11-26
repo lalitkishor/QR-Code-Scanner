@@ -1,6 +1,7 @@
 
 #preview{
 	width: 100vh;
+	margin-right: 10px;
 	display: inline-block;
 }
 .itemDetail{
