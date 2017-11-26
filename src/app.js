@@ -1,6 +1,7 @@
 var app = angular.module("barcode",[]);
 app.controller("barcodeCtrl",function($scope){
  	$scope.scans = [];
+
 	var scanner = new Instascan.Scanner({ video: document.getElementById('preview'),scanPeriod: 5 });
 
 	scanner.addListener('scan', function (content, image) {
