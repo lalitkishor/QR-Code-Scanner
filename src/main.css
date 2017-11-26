@@ -1,6 +1,9 @@
 
+.container{
+	margin-left: 0px;
+}
+
 #preview{
-	padding-left: 10px;
 	display: inline-block;
 }
 .itemDetail{
